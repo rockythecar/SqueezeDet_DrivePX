@@ -20,11 +20,11 @@ The following instructions are written for Linux-based distros.
 - Clone the SqueezeDet repository:
 
   ```Shell
-  git clone https://github.com/BichenWuUCB/squeezeDet.git
+  git clone git@github.com:honda-research-institute/SqueezeDet_DrivePX.git
   ```
   Let's call the top level directory of SqueezeDet `$SQDT_ROOT`. 
 
-- (Optional) Setup your own virtual environment.
+-- (Optional) Setup your own virtual environment.
 
   1. The following assumes `python` is the Python2.7 executable. Navigate to your user home directory, and create the virtual environment there.
   
