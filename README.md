@@ -17,29 +17,32 @@ This version was amended for the drivePX
 
 The following instructions are written for Linux-based distros.
 
+### DrivePX
+
 - Clone the SqueezeDet repository:
 
   ```Shell
   git clone git@github.com:honda-research-institute/SqueezeDet_DrivePX.git
   ```
   Let's call the top level directory of SqueezeDet `$SQDT_ROOT`. 
-
-### DrivePX
-
+  
 - Load nvidia docker [tensorflow]:
 
 - Use pip to install required Python packages:
   
-  1.(Optional) Install pip if the DrivePx doesn't have it:
+  1. (Optional) Install pip if the DrivePx doesn't have it:
     
     ```Shell
     sudo apt-get update
     sudo apt-get install python-pip
     ```
     
-  2. Edit requirement file, remove openCV and tensorflow    
+  2. Edit requirements file, remove openCV and tensorflow    
     ```Shell
-    pip install -r requirements.txt
+    easydict==1.6
+    joblib==0.10.3
+    numpy==1.12.0
+    Pillow==4.0.0
     ```
    
   3. Install package for python    
@@ -47,6 +50,20 @@ The following instructions are written for Linux-based distros.
     pip install -r requirements.txt
     ```
 
+- Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
+
+  ```Shell
+  cd $SQDT_ROOT/data/
+  wget https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz
+  tar -xzvf model_checkpoints.tgz
+  rm model_checkpoints.tgz
+  ```
+
+
+- Now we can run the program. Make sure you download photos into the "input_path"
+  ```Shell
+  python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  ```
 
 ### NonDrivePX
 For example, the local PC with ubuntu
@@ -94,13 +111,7 @@ For example, the local PC with ubuntu
   python ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
   ```
 - Demo in DrivePX docker. 
-- Change requirement.txt. Remove OpenCV. You may remove tensorflow if the docker image already includes it. 
-  ```Shell
-    easydict==1.6
-    joblib==0.10.3
-    numpy==1.12.0
-    Pillow==4.0.0
-  ```
+
 - Use pip to install required Python packages:
     
     ```Shell
@@ -108,10 +119,7 @@ For example, the local PC with ubuntu
     ```
 - Change python2 syntax to python3. This part was done.
 
-- Run python3
-  ```Shell
-  python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
-  ```
+
 
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
