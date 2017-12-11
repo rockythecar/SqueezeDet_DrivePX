@@ -26,7 +26,6 @@ The following instructions are written for Linux-based distros.
 
 ### DrivePX
 
-- (Optional) Setup your own virtual environment.
 
     
 - Use pip to install required Python packages:
@@ -34,17 +33,17 @@ The following instructions are written for Linux-based distros.
     ```Shell
     pip install -r requirements.txt
     ```
-- (Optional) Install pip:
+- (Optional) Install pip if the DrivePx doesn't have it:
     
     ```Shell
     sudo apt-get update
     sudo apt-get install python-pip
     ```
-https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#1
 
 ### NonDrivePX
 For example, the local PC with ubuntu
 
+- (Optional) Setup your own virtual environment.
 
   1. The following assumes `python` is the Python2.7 executable. Navigate to your user home directory, and create the virtual environment there.
   
