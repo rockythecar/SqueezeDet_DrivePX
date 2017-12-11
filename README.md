@@ -131,7 +131,7 @@ For example, the local PC with ubuntu
 
 - Now we can run the program for our files. Make sure you download photos into the "input_path"
   ```Shell
-  python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  python ./src/demo.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
   ```
 
 ## Training/Validation:
