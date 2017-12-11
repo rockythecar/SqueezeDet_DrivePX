@@ -26,19 +26,27 @@ The following instructions are written for Linux-based distros.
 
 ### DrivePX
 
+- Load nvidia docker [tensorflow]:
 
-    
 - Use pip to install required Python packages:
-    
-    ```Shell
-    pip install -r requirements.txt
-    ```
-- (Optional) Install pip if the DrivePx doesn't have it:
+  
+  1.(Optional) Install pip if the DrivePx doesn't have it:
     
     ```Shell
     sudo apt-get update
     sudo apt-get install python-pip
     ```
+    
+  2. Edit requirement file, remove openCV and tensorflow    
+    ```Shell
+    pip install -r requirements.txt
+    ```
+   
+  3. Install package for python    
+    ```Shell
+    pip install -r requirements.txt
+    ```
+
 
 ### NonDrivePX
 For example, the local PC with ubuntu
