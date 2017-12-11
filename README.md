@@ -28,18 +28,6 @@ The following instructions are written for Linux-based distros.
 
 - (Optional) Setup your own virtual environment.
 
-  1. The following assumes `python` is the Python2.7 executable. Navigate to your user home directory, and create the virtual environment there.
-  
-    ```Shell
-    cd ~
-    virtualenv env --python=python
-    ```
-    
-  2. Launch the virtual environment.
-  
-    ```Shell
-    source env/bin/activate
-    ```
     
 - Use pip to install required Python packages:
     
@@ -53,6 +41,23 @@ The following instructions are written for Linux-based distros.
     sudo apt-get install python-pip
     ```
 https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#1
+
+### NonDrivePX
+For example, the local PC with ubuntu
+
+
+  1. The following assumes `python` is the Python2.7 executable. Navigate to your user home directory, and create the virtual environment there.
+  
+    ```Shell
+    cd ~
+    virtualenv env --python=python
+    ```
+    
+  2. Launch the virtual environment.
+  
+    ```Shell
+    source env/bin/activate
+    ```
 
 ## Demo:
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
