@@ -72,6 +72,14 @@ The following instructions are written for Linux-based distros.
   ```
 
 ### NonDrivePX
+
+- Clone the SqueezeDet from DIFFERENT repository:
+
+  ```Shell
+  git clone git@github.com:BichenWuUCB/squeezeDet.git
+  ```
+  Let's call the top level directory of SqueezeDet `$SQDT_ROOT`. 
+  
 For example, the local PC with ubuntu
 
 - (Optional) Setup your own virtual environment.
