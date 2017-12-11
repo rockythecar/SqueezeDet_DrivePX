@@ -41,6 +41,14 @@ The following instructions are written for Linux-based distros.
     ```Shell
     pip install -r requirements.txt
     ```
+- (Optional) Install pip:
+    
+    ```Shell
+    sudo apt-get update
+    sudo apt-get install python-pip
+    ```
+https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#1
+
 ## Demo:
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
 
@@ -63,6 +71,30 @@ The following instructions are written for Linux-based distros.
   To detect other image(s), use the flag `--input_path=./data/*.png` to point to input image(s). Input image(s) will be scaled to the resolution of 1242x375 (KITTI image resolution), so it works best when original resolution is close to that.  
 
 - SqueezeDet is a real-time object detector, which can be used to detect videos. The video demo will be released later.
+
+- Demo in local PC
+  ```Shell
+  python ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  ```
+- Demo in DrivePX docker. 
+- Change requirement.txt. Remove OpenCV. You may remove tensorflow if the docker image already includes it. 
+  ```Shell
+    easydict==1.6
+    joblib==0.10.3
+    numpy==1.12.0
+    Pillow==4.0.0
+  ```
+- Use pip to install required Python packages:
+    
+    ```Shell
+    pip install -r requirements.txt
+    ```
+- Change python2 syntax to python3. This part was done.
+
+- Run python3
+  ```Shell
+  python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  ```
 
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
