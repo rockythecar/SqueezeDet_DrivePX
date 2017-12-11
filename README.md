@@ -9,7 +9,13 @@ This version was amended for the drivePX
 - demo_v1_crop.py
 
   ```Shell
-  Choose the center part of the image, no resize. Local machine.
+  Choose the center part of the image, no resize. Not for drivePX.
+  ```
+
+- demo_v3_PIL.py
+
+  ```Shell
+  Choose the center part of the image, no resize. drivePX version.
   ```
 
 
@@ -82,8 +88,20 @@ For example, the local PC with ubuntu
     ```Shell
     source env/bin/activate
     ```
+- Use pip to install required Python packages:
+  
+  1. (Optional) Install pip if the your machine doesn't have it:
+    
+    ```Shell
+    sudo apt-get update
+    sudo apt-get install python-pip
+    ```  
+   
+  2. Install package for python    
+    ```Shell
+    pip install -r requirements.txt
+    ```
 
-## Demo:
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
 
   ```Shell
@@ -92,9 +110,7 @@ For example, the local PC with ubuntu
   tar -xzvf model_checkpoints.tgz
   rm model_checkpoints.tgz
   ```
-
-
-- Now we can run the demo. To detect the sample image `$SQDT_ROOT/data/sample.png`,
+- (Optional) Now we can run the demo. To detect the sample image `$SQDT_ROOT/data/sample.png`,
 
   ```Shell
   cd $SQDT_ROOT/
@@ -104,22 +120,11 @@ For example, the local PC with ubuntu
 
   To detect other image(s), use the flag `--input_path=./data/*.png` to point to input image(s). Input image(s) will be scaled to the resolution of 1242x375 (KITTI image resolution), so it works best when original resolution is close to that.  
 
-- SqueezeDet is a real-time object detector, which can be used to detect videos. The video demo will be released later.
 
-- Demo in local PC
+- Now we can run the program for our files. Make sure you download photos into the "input_path"
   ```Shell
-  python ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
   ```
-- Demo in DrivePX docker. 
-
-- Use pip to install required Python packages:
-    
-    ```Shell
-    pip install -r requirements.txt
-    ```
-- Change python2 syntax to python3. This part was done.
-
-
 
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
