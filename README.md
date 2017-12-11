@@ -15,7 +15,7 @@ This version was amended for the drivePX
 - demo_v3_PIL.py
 
   ```Shell
-  Choose the center part of the image, no resize. drivePX version.
+  Resize. DrivePX version.
   ```
 
 
