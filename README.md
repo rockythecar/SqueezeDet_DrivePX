@@ -24,7 +24,9 @@ The following instructions are written for Linux-based distros.
   ```
   Let's call the top level directory of SqueezeDet `$SQDT_ROOT`. 
 
--- (Optional) Setup your own virtual environment.
+### DrivePX
+
+- (Optional) Setup your own virtual environment.
 
   1. The following assumes `python` is the Python2.7 executable. Navigate to your user home directory, and create the virtual environment there.
   
