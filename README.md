@@ -3,7 +3,16 @@
 This repository contains a initial tensorflow implementation of SqueezeDet, a convolutional neural network based object detector described in their paper: https://arxiv.org/abs/1612.01051.
 
 This version was amended for the drivePX
-    
+
+## Version:
+
+- demo_v1_crop.py
+
+  ```Shell
+  Choose the center part of the image, no resize. Local machine.
+  ```
+
+
 ## Installation:
 
 The following instructions are written for Linux-based distros.
