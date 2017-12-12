@@ -134,6 +134,26 @@ For example, the local PC with ubuntu
   python ./src/demo.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
   ```
 
+## Parameters:
+- Boxes, Labels, probabilities
+
+  ```Shell
+        print (final_boxes)
+        print (final_probs)
+        print (final_class)
+        print (mc.CLASS_NAMES)
+  ```
+  
+Output
+
+  ```Shell
+[array([ 948.63018799,  187.26040649,   34.27148438,  122.31188965], dtype=float32)]
+[0.4635523]
+[1]
+['car', 'pedestrian', 'cyclist']
+
+  ```
+
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
 
