@@ -144,13 +144,13 @@ For example, the local PC with ubuntu
         print (mc.CLASS_NAMES)
   ```
   
-Output
+- Output
 
   ```Shell
-[array([ 948.63018799,  187.26040649,   34.27148438,  122.31188965], dtype=float32)]
-[0.4635523]
-[1]
-['car', 'pedestrian', 'cyclist']
+  [array([ 948.63018799,  187.26040649,   34.27148438,  122.31188965], dtype=float32)]
+  [0.4635523]
+  [1]
+  ['car', 'pedestrian', 'cyclist']
 
   ```
 
