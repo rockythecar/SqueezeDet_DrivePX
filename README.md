@@ -165,7 +165,7 @@ For example, the local PC with ubuntu
   
 
 ## Training/Validation:
-- Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) [direct link](http://kitti.is.tue.mpg.de/kitti/data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip)[direct link](http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
+- Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) [(direct link)](http://kitti.is.tue.mpg.de/kitti/data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip) [(direct link)](http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
 
 - Now we need to split the training data into a training set and a vlidation set. 
 
