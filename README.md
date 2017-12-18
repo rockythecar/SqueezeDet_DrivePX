@@ -153,6 +153,16 @@ For example, the local PC with ubuntu
   ['car', 'pedestrian', 'cyclist']
 
   ```
+  
+- Threshold
+
+  ```Shell
+  /squeezeDet/src/config/kitti_squeezeDet_config.py
+  
+
+  ```
+  
+  
 
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
