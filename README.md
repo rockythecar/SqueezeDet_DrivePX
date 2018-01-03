@@ -220,6 +220,11 @@ For example, the local PC with ubuntu
   ```
 
   Training logs are saved to the directory specified by `-train_dir`. GPU id is specified by `-gpu`. Network to train is specificed by `-net` 
+  We choose the following
+
+  ```Shell
+  ./scripts/train.sh -net squeezeDet -train_dir /tmp/bichen/logs/squeezedet -gpu 0
+  ```
 
 - Before evaluation, you need to first compile the official evaluation script of KITTI dataset
   ```Shell
