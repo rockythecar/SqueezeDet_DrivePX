@@ -247,6 +247,7 @@ For example, the local PC with ubuntu
 
   ```Shell
   tensorboard --logdir=$LOG_DIR
+  tensorboard --logdir=/tmp/bichen/logs/squeezedet/train/
   ```
   Here, `$LOG_DIR` is the directory where your training and evaluation threads dump log events, which should be the same as `-train_dir` and `-eval_dir` specified in `train.sh` and `eval.sh`. From tensorboard, you should be able to see a lot of information including loss, average precision, error analysis, example detections, model visualization, etc.
 
