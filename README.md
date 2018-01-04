@@ -225,6 +225,16 @@ For example, the local PC with ubuntu
   ```Shell
   ./scripts/train.sh -net squeezeDet -train_dir /tmp/bichen/logs/squeezedet -gpu 0
   ```
+### Validation version 1: 
+Chenghung Yeh
+- Check the checkpoint in the training path. Note: Use "model.ckpt-999999" instead of "model.ckpt-998000.data-00000-of-00001"
+
+  ```Shell
+  python ./src/demo_v5_crop_random_debug.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result2/" --checkpoint="/tmp/bichen/logs/squeezedet/train/model.ckpt-999999"
+  ```
+
+
+### Validation version 2: 
 
 - Before evaluation, you need to first compile the official evaluation script of KITTI dataset
   ```Shell
