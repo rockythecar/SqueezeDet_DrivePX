@@ -161,8 +161,20 @@ For example, the local PC with ubuntu
   
 
   ```
+  - Size
+  ```
+  kitti_squeezeDet_config.py
+  mc.IMAGE_WIDTH           = 1248
+  mc.IMAGE_HEIGHT          = 384
+  ```
+  - Flow chart
+  ```
+  train.py
+    elif FLAGS.net == 'squeezeDet':
+    mc = kitti_squeezeDet_config()  ```
   
-  
+  demo_v6.py -> kitti_squeezeDet_config() kitti_squeezeDet_config.py
+  ```
 
 ## Training/Validation:
 - Download KITTI object detection dataset: [images](http://www.cvlibs.net/download.php?file=data_object_image_2.zip) [(direct link)](http://kitti.is.tue.mpg.de/kitti/data_object_image_2.zip) and [labels](http://www.cvlibs.net/download.php?file=data_object_label_2.zip) [(direct link)](http://kitti.is.tue.mpg.de/kitti/data_object_label_2.zip). Put them under `$SQDT_ROOT/data/KITTI/`. Unzip them, then you will get two directories:  `$SQDT_ROOT/data/KITTI/training/` and `$SQDT_ROOT/data/KITTI/testing/`. 
