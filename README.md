@@ -166,12 +166,20 @@ For example, the local PC with ubuntu
   kitti_squeezeDet_config.py
   mc.IMAGE_WIDTH           = 1248
   mc.IMAGE_HEIGHT          = 384
+  
+
+
   ```
   - Flow chart
   ```
+  train.py -> SqueezeDet(mc) @ kitti_squeezeDet_config.py -> 
+  imdb = kitti(FLAGS.image_set, FLAGS.data_path, mc) @ kitti.py -> imdb.__init__@imdb.py ->
+  im = cv2.resize(im, (mc.IMAGE_WIDTH, mc.IMAGE_HEIGHT))@ imdb.py-> imdb.read_batch() @ imdb.py 
   train.py
     elif FLAGS.net == 'squeezeDet':
     mc = kitti_squeezeDet_config()  ```
+  imdb.py
+  im = cv2.resize(im, (mc.IMAGE_WIDTH, mc.IMAGE_HEIGHT))
   
   demo_v6.py -> kitti_squeezeDet_config() kitti_squeezeDet_config.py
   ```
