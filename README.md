@@ -205,6 +205,7 @@ For example, the local PC with ubuntu
   then you should get the `train.txt` and `val.txt` under `$SQDT_ROOT/data/KITTI/ImageSets`. 
 
   When above two steps are finished, the structure of `$SQDT_ROOT/data/KITTI/` should at least contain:
+  note: Change image_set_dir = './KITTI/ImageSets' if your data is not in KITTI
 
   ```Shell
   $SQDT_ROOT/data/KITTI/
