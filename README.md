@@ -239,21 +239,21 @@ For example, the local PC with ubuntu
 - Now we can start training. Training script can be found in `$SQDT_ROOT/scripts/train.sh`, which contains commands to train 4 models: SqueezeDet, SqueezeDet+, VGG16+ConvDet, ResNet50+ConvDet. 
   ```Shell
   cd $SQDT_ROOT/
-  ./scripts/train.sh -net (squeezeDet|squeezeDet+|vgg16|resnet50) -train_dir /tmp/bichen/logs/squeezedet -gpu 0
+  ./scripts/train.sh -net (squeezeDet|squeezeDet+|vgg16|resnet50) -train_dir /tmp/bichen/logs/squeezeDet -gpu 0
   ```
 
   Training logs are saved to the directory specified by `-train_dir`. GPU id is specified by `-gpu`. Network to train is specificed by `-net` 
 - We choose the following
 
   ```Shell
-  ./scripts/train.sh -net squeezeDet -train_dir /tmp/bichen/logs/squeezedet -gpu 0
+  ./scripts/train.sh -net squeezeDet -train_dir /tmp/bichen/logs/squeezeDet -gpu 0
   ```
 ### Validation version 1: 
 Chenghung Yeh
 - Check the checkpoint in the training path. Note: Use "model.ckpt-999999" instead of "model.ckpt-998000.data-00000-of-00001"
 
   ```Shell
-  python ./src/demo_v5_crop_random_debug.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result2/" --checkpoint="/tmp/bichen/logs/squeezedet/train/model.ckpt-999999"
+  python ./src/demo_v5_crop_random_debug.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result2/" --checkpoint="/tmp/bichen/logs/squeezeDet/train/model.ckpt-999999"
   ```
 
 
@@ -269,7 +269,7 @@ Chenghung Yeh
 
   ```Shell
   cd $SQDT_ROOT/
-  ./scripts/eval.sh -net (squeezeDet|squeezeDet+|vgg16|resnet50) -eval_dir /tmp/bichen/logs/squeezedet -image_set (train|val) -gpu 1
+  ./scripts/eval.sh -net (squeezeDet|squeezeDet+|vgg16|resnet50) -eval_dir /tmp/bichen/logs/squeezeDet -image_set (train|val) -gpu 1
   ```
 
   Note that `-train_dir` in the training script should be the same as `-eval_dir` in the evaluation script to make it easy for tensorboard to load logs. 
@@ -280,7 +280,7 @@ Chenghung Yeh
 
   ```Shell
   tensorboard --logdir=$LOG_DIR
-  tensorboard --logdir=/tmp/bichen/logs/squeezedet/train/
+  tensorboard --logdir=/tmp/bichen/logs/squeezeDet/train/
   ```
   Here, `$LOG_DIR` is the directory where your training and evaluation threads dump log events, which should be the same as `-train_dir` and `-eval_dir` specified in `train.sh` and `eval.sh`. From tensorboard, you should be able to see a lot of information including loss, average precision, error analysis, example detections, model visualization, etc.
 
