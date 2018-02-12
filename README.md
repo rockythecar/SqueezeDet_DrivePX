@@ -281,6 +281,7 @@ Chenghung Yeh
   ```Shell
   tensorboard --logdir=$LOG_DIR
   tensorboard --logdir=/tmp/bichen/logs/squeezeDet/train/
+  This part should be run automatically, therefore you can type http://127.0.1.1:6006 in the explore.
   ```
   Here, `$LOG_DIR` is the directory where your training and evaluation threads dump log events, which should be the same as `-train_dir` and `-eval_dir` specified in `train.sh` and `eval.sh`. From tensorboard, you should be able to see a lot of information including loss, average precision, error analysis, example detections, model visualization, etc.
 
