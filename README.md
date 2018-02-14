@@ -270,6 +270,8 @@ Chenghung Yeh
   ```Shell
   cd $SQDT_ROOT/
   ./scripts/eval.sh -net (squeezeDet|squeezeDet+|vgg16|resnet50) -eval_dir /tmp/bichen/logs/squeezeDet -image_set (train|val) -gpu 1
+   ./scripts/eval_v4_city_crop.sh -gpu 1
+
   ```
 
   Note that `-train_dir` in the training script should be the same as `-eval_dir` in the evaluation script to make it easy for tensorboard to load logs. 
