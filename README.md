@@ -131,7 +131,8 @@ For example, the local PC with ubuntu
 
 - Now we can run the program for our files. Make sure you download photos into the "input_path"
   ```Shell
-  python ./src/demo.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  python ./src/demo.py  --checkpoint="./../logs/squeezeDet/train/model.ckpt-111000"  --out_dir="result/"
+  
   ```
 
 ## Parameters:
@@ -247,17 +248,21 @@ For example, the local PC with ubuntu
 
   ```Shell
   ./scripts/train.sh -net squeezeDet -train_dir /tmp/bichen/logs/squeezeDet -gpu 0
+  ./scripts/train_City_crop.sh  -gpu 0
+
   ```
-### Validation version 1: 
+### Validation version 1: Use our own
 Chenghung Yeh
 - Check the checkpoint in the training path. Note: Use "model.ckpt-999999" instead of "model.ckpt-998000.data-00000-of-00001"
 
   ```Shell
   python ./src/demo_v5_crop_random_debug.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result2/" --checkpoint="/tmp/bichen/logs/squeezeDet/train/model.ckpt-999999"
+  python ./src/demo_v6_crop_random_japan_csv.py  --checkpoint="./../logs/squeezeDet/train/model.ckpt-111000" --input_path="./../one_half_x_us/Sakamoto/re_kailum/train/png/*.png"  --out_dir="result_japan_w_city/" --out_csv="squeeze_th0.1_N512_train_City.csv"
+  
   ```
 
 
-### Validation version 2: 
+### Validation version 2: KITTI official
 
 - Before evaluation, you need to first compile the official evaluation script of KITTI dataset
   ```Shell
