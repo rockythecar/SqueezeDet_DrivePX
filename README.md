@@ -53,7 +53,8 @@ The following instructions are written for Linux-based distros.
    
   3. Install package for python    
     ```Shell
-    pip install -r requirements.txt
+    # drivepx only use python3
+    pip3 install -r requirements.txt
     ```
 
 - Download SqueezeDet model parameters from [here](https://www.dropbox.com/s/a6t3er8f03gdl4z/model_checkpoints.tgz?dl=0), untar it, and put it under `$SQDT_ROOT/data/` If you are using command line, type:
@@ -69,6 +70,8 @@ The following instructions are written for Linux-based distros.
 - Now we can run the program. Make sure you download photos into the "input_path"
   ```Shell
   python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  python3 ./src/demo_v3_PIL.py  --input_path="   ./../dataset_japan/re_kailum/train/png/*.png"  --out_dir="result/"
+
   ```
 
 ### NonDrivePX
