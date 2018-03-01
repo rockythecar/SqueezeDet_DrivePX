@@ -70,9 +70,21 @@ The following instructions are written for Linux-based distros.
 - Now we can run the program. Make sure you download photos into the "input_path"
   ```Shell
   python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
+  # squeezeDet
   python3 ./src/demo_v3_PIL.py  --input_path="./../dataset_japan/re_kailum/train/png/*.png"  --out_dir="result/"
+  # squeezeDet+
+  python3 ./src/demo_v3_PIL.py  --input_path="./../dataset_japan/re_kailum/train/png/*.png"  --out_dir="result/" --demo_net='squeezeDet+' --checkpoint='./data/model_checkpoints/squeezeDetPlus/model.ckpt-95000'
 
   ```
+- Speed result:
+  ```Shell
+  # squeezeDet
+  FPS(mean), detection: 25.54510197777317  
+  # squeezeDet+
+  FPS(mean), detection: 12.655836431899006 
+  ```
+  
+
 
 ### NonDrivePX
 
