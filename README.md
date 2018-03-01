@@ -70,7 +70,7 @@ The following instructions are written for Linux-based distros.
 - Now we can run the program. Make sure you download photos into the "input_path"
   ```Shell
   python3 ./src/demo_v3_PIL.py  --input_path="./../one_half_x/object-detection-crowdai/*.jpg"  --out_dir="result/"
-  python3 ./src/demo_v3_PIL.py  --input_path="   ./../dataset_japan/re_kailum/train/png/*.png"  --out_dir="result/"
+  python3 ./src/demo_v3_PIL.py  --input_path="./../dataset_japan/re_kailum/train/png/*.png"  --out_dir="result/"
 
   ```
 
